@@ -1,0 +1,133 @@
+/* About Page Container */
+.about-container {
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #1F1F1F, #242424); /* Gradient background */
+    overflow-y: auto; /* Allow vertical scroll if content exceeds */
+    box-sizing: border-box; /* Include padding in height calculations */
+}
+
+/* Hero Section */
+.about-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00BFFF;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    color: #B0BEC5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Roadmap Section */
+.roadmap {
+    flex: 1;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Center the milestones horizontally */
+}
+
+.roadmap-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #00BFFF;
+    margin-bottom: 30px;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%; /* Stretch the timeline to full width */
+    max-width: 800px; /* Limit max width */
+}
+
+/* Milestone */
+.milestone {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #242424;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.milestone-icon {
+    font-size: 3rem;
+    color: #00BFFF;
+}
+
+.milestone-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.milestone-content p {
+    font-size: 1rem;
+    color: #B0BEC5;
+    line-height: 1.5;
+}
+
+/* Call to Action Section */
+.cta-section {
+    text-align: center;
+    padding: 20px;
+    background: #242424;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    color: #00BFFF;
+    margin-bottom: 10px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    color: #B0BEC5;
+    margin-bottom: 20px;
+}
+
+/* Contact Button */
+.cta-button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #00BFFF;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0, 191, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #008CBA;
+    box-shadow: 0px 8px 20px rgba(0, 191, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.cta-button:active {
+    transform: translateY(1px);
+}
