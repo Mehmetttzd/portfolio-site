@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import { FaHome, FaUser, FaBriefcase, FaEnvelope, FaFacebook, FaTwitter, FaLinkedin, FaCode, FaLaptopCode, FaRocket, FaUsers } from 'react-icons/fa';
+import { Link } from 'react-router-dom';  // Import Link for internal routing
 
 const Home: React.FC = () => {
     return (
@@ -10,24 +11,24 @@ const Home: React.FC = () => {
                 <h1 className="portfolio-title">MY PORTFOLIO</h1>
                 <ul className="nav-links">
                     <li>
-                        <a href="/">
+                        <Link to="/home">  {/* Use relative path for routing */}
                             <FaHome /> Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/about">
+                        <Link to="/about">  {/* Use relative path for routing */}
                             <FaUser /> About
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/experience">
+                        <Link to="/experience">  {/* Use relative path for routing */}
                             <FaBriefcase /> Experience
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/contact">
+                        <Link to="/contact">  {/* Use relative path for routing */}
                             <FaEnvelope /> Contact
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 <div className="social-links">
