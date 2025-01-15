@@ -1,0 +1,160 @@
+/* Container */
+.experience-container {
+    padding: 40px 20px;
+    background: #1F1F1F;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Ensure no unnecessary scrolling */
+}
+
+/* Title */
+.experience-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00BFFF;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Layout: Left (Charts) and Right (Job Descriptions) */
+.experience-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Charts Section */
+.charts-section {
+    flex: 1; /* Occupies half the space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeInLeft 2s ease-out;
+}
+
+.chart {
+    background: #242424;
+    border-radius: 10px;
+    padding: 15px; /* Increased padding for a larger chart area */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    height: 300px; /* Larger height for the charts */
+    width: 95%; /* Slightly bigger width */
+    margin: 0 auto;
+    animation: scaleUp 0.8s ease-out;
+}
+
+.chart canvas {
+    max-height: 280px; /* Adjusted canvas height */
+    max-width: 100%; /* Ensure the canvas takes the full width */
+}
+
+/* Chart Title */
+.chart-title {
+    font-size: 1.4rem; /* Slightly larger title font */
+    color: #00BFFF;
+    text-align: center;
+    margin-bottom: 15px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Job Boxes Section */
+.job-boxes {
+    flex: 1; /* Occupies half the space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeInRight 2s ease-out;
+}
+
+.job-box {
+    background: #242424;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceIn 1s ease-out;
+}
+
+.job-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 20px rgba(0, 191, 255, 0.6);
+}
+
+.job-box h2 {
+    font-size: 1.6rem; /* Slightly larger job title font */
+    color: #00BFFF;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.job-box p {
+    font-size: 1rem;
+    color: #B0BEC5;
+    line-height: 1.6; /* Slightly increased line height for readability */
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

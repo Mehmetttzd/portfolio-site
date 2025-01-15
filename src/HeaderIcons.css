@@ -1,0 +1,33 @@
+/* Header Icons Container */
+.header-icons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 12px; /* Reduce spacing between icons */
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1); /* Match the sidebar style */
+    padding: 8px; /* Adjust padding */
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Reduce shadow intensity */
+}
+
+/* Icon Link */
+.icon-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.2rem; /* Reduce font size */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effects */
+.icon-link:hover {
+    color: #00BFFF; /* Match hover color */
+    transform: scale(1.15); /* Slightly enlarge icon on hover */
+}
+
+/* Individual Icon */
+.header-icon {
+    font-size: 1.6rem; /* Adjust icon size */
+    color: #00BFFF; /* Icon default color */
+}

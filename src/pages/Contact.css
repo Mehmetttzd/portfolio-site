@@ -1,0 +1,165 @@
+/* Full-Screen Page Wrapper */
+.contact-page {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #1F1F1F, #121212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Main Container */
+.contact-container {
+    width: 100%;
+    max-width: 1000px; /* Limit the overall width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header Section */
+.contact-header {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00BFFF;
+}
+
+.contact-header p {
+    font-size: 1rem;
+    color: #B0BEC5;
+    margin-top: 10px;
+}
+
+/* Contact Content Layout */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    background: #242424;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #FFFFFF;
+    max-height: 450px; /* Match the height of the Contact Info box */
+    max-width: 480px; /* Scale down the width */
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00BFFF;
+}
+
+/* Input Field Styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-input {
+    background: #1F1F1F;
+    border: 1px solid #B0BEC5;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #00BFFF;
+    box-shadow: 0px 0px 5px rgba(0, 191, 255, 0.6);
+    outline: none;
+}
+
+.textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Submit Button */
+.submit-button {
+    background: #00BFFF;
+    color: #FFFFFF;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background: #008CBA;
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+    background: #242424;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 450px; /* Match the height of the Contact Form */
+    max-width: 480px; /* Scale down the width */
+    color: #FFFFFF;
+}
+
+.contact-info h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00BFFF;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-icon {
+    font-size: 1.2rem;
+    color: #00BFFF;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #B0BEC5;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    color: #00BFFF;
+    transform: scale(1.1);
+}
