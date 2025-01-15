@@ -1,17 +1,21 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './About.css';
-import { FaGraduationCap, FaBriefcase, FaLaptopCode } from 'react-icons/fa';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./About.css";
+import { FaGraduationCap, FaBriefcase, FaLaptopCode } from "react-icons/fa";
+import HeaderIcons from "../HeaderIcons";
 
 const About: React.FC = () => {
     const navigate = useNavigate(); // For navigating to Contact Page
 
     const handleContactClick = () => {
-        navigate('/contact'); // Navigate to Contact page
+        navigate("/contact"); // Navigate to Contact page
     };
 
     return (
         <div className="about-container">
+            {/* Header Icons */}
+            <HeaderIcons /> {/* Include the HeaderIcons component here */}
+
             {/* Hero Section */}
             <header className="about-hero">
                 <h1>About Me</h1>

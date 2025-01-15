@@ -1,10 +1,14 @@
-import React from 'react';
-import './Contact.css';
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import React from "react";
+import "./Contact.css";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import HeaderIcons from "../HeaderIcons"; // Import the HeaderIcons component
 
 const Contact: React.FC = () => {
     return (
         <div className="contact-page">
+            {/* Header Icons */}
+            <HeaderIcons />
+
             <div className="contact-container">
                 {/* Header Section */}
                 <header className="contact-header">
@@ -37,7 +41,7 @@ const Contact: React.FC = () => {
                         <h2>Get in Touch</h2>
                         <div className="info-item">
                             <FaEnvelope className="info-icon" />
-                            <p>mehmet.z.d80@gmail.com.com</p>
+                            <p>mehmet.z.d80@gmail.com</p>
                         </div>
                         <div className="info-item">
                             <FaPhone className="info-icon" />

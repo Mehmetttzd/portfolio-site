@@ -11,6 +11,20 @@
     background: linear-gradient(to right, #1F1F1F, #242424); /* Gradient background */
     overflow-y: auto; /* Allow vertical scroll if content exceeds */
     box-sizing: border-box; /* Include padding in height calculations */
+    border: 3px solid transparent;
+    border-radius: 15px;
+    position: relative;
+    animation: glowAnimation 1.5s infinite alternate;
+}
+
+/* Glowing Effect Animation */
+@keyframes glowAnimation {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 191, 255, 0.7), 0 0 25px rgba(0, 191, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(0, 191, 255, 1), 0 0 40px rgba(0, 191, 255, 0.8);
+    }
 }
 
 /* Hero Section */
@@ -24,6 +38,7 @@
     font-weight: bold;
     color: #00BFFF;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: textSlideIn 1s ease-in-out;
 }
 
 .about-hero p {
@@ -31,6 +46,29 @@
     color: #B0BEC5;
     max-width: 800px;
     margin: 0 auto;
+    animation: fadeInText 1.5s ease-out;
+}
+
+/* Text Fade-In Animation */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Text Slide-In Animation */
+@keyframes textSlideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Roadmap Section */
@@ -48,6 +86,7 @@
     font-size: 2rem;
     color: #00BFFF;
     margin-bottom: 30px;
+    animation: textSlideIn 1s ease-in-out;
 }
 
 /* Timeline */
@@ -68,6 +107,12 @@
     background: #242424;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.milestone:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 25px rgba(0, 191, 255, 0.7);
 }
 
 .milestone-icon {
@@ -94,6 +139,12 @@
     background: #242424;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-section:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 191, 255, 0.7);
 }
 
 .cta-section h2 {
@@ -131,3 +182,21 @@
 .cta-button:active {
     transform: translateY(1px);
 }
+
+/* Style for the icons in the HeaderIcons component */
+.header-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 2rem;
+}
+
+.header-icons .icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #B0BEC5; /* Initial color */
+}
+
+.header-icons .icon:hover {
+    transform: scale(1.2); /* Slightly enlarges the icon */
+    color: #00BFFF; /* Changes color on hover */
+}
+

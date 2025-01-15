@@ -13,6 +13,7 @@ import {
     Legend,
 } from 'chart.js';
 import './Experience.css';
+import HeaderIcons from '../HeaderIcons'; // Import HeaderIcons component
 
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, BarElement, RadialLinearScale, PointElement, LineElement, Title, Tooltip, Legend);
@@ -46,6 +47,9 @@ const Experience: React.FC = () => {
 
     return (
         <div className="experience-container">
+            {/* Add Header Icons */}
+            <HeaderIcons />
+
             <h1 className="experience-title">My Experience</h1>
             <div className="experience-layout">
                 {/* Left Side: Charts */}

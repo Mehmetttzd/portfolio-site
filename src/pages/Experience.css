@@ -14,6 +14,7 @@
     color: #00BFFF;
     text-align: center;
     margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out;
 }
 
 /* Layout: Left (Charts) and Right (Job Descriptions) */
@@ -22,6 +23,7 @@
     justify-content: space-between;
     gap: 20px;
     align-items: flex-start;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 /* Charts Section */
@@ -30,6 +32,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    animation: fadeInLeft 2s ease-out;
 }
 
 .chart {
@@ -40,6 +43,7 @@
     height: 300px; /* Larger height for the charts */
     width: 95%; /* Slightly bigger width */
     margin: 0 auto;
+    animation: scaleUp 0.8s ease-out;
 }
 
 .chart canvas {
@@ -52,7 +56,8 @@
     font-size: 1.4rem; /* Slightly larger title font */
     color: #00BFFF;
     text-align: center;
-    margin-bottom: 15px; /* Increased spacing below the title */
+    margin-bottom: 15px;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 /* Job Boxes Section */
@@ -61,6 +66,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    animation: fadeInRight 2s ease-out;
 }
 
 .job-box {
@@ -69,6 +75,7 @@
     padding: 20px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceIn 1s ease-out;
 }
 
 .job-box:hover {
@@ -80,10 +87,74 @@
     font-size: 1.6rem; /* Slightly larger job title font */
     color: #00BFFF;
     margin-bottom: 10px;
+    animation: fadeInUp 1s ease-out;
 }
 
 .job-box p {
     font-size: 1rem;
     color: #B0BEC5;
     line-height: 1.6; /* Slightly increased line height for readability */
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
